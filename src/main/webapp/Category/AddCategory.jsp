@@ -33,7 +33,7 @@
                   
                 %>
                 
-                ${userObject}
+                
         <c:choose>
 
             <c:when test="${not empty userObject}">

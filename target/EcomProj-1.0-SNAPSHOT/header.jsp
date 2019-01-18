@@ -22,20 +22,23 @@
 
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-    <a class="navbar-brand" href="http://localhost:${pageContext.request.localPort}${pageContext.request.contextPath}/index.jsp">ApniDukan</a>
+    <a class="navbar-brand" href="http://localhost:${pageContext.request.localPort}${pageContext.request.contextPath}/index.jsp">Shop 24</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="/EcomProj/index.jsp">Home<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/EcomProj/AboutUs.jsp">About Us</a>
-            </li>
+            <a class="dropdown-item" href="/EcomProj/User/Profile.jsp"><i>Admin-Role</i></a>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:black;">       
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/EcomProj/Product/AddProduct.jsp"><i>Add Product</i></a>
+                        <a class="dropdown-item" href="/EcomProj/Category/AddCategory.jsp"><i>Add Category</i></a>
+                        
+            </div>
         </ul>
+        
 
 
 
@@ -60,7 +63,7 @@
                     request.setAttribute("size", l.size());
             %>
                 <div class="navbar ml-auto dropdown" style="font-size: 18px; padding: 0;">
-                    <a href="/EcomProj/Cart/ViewCart.jsp" style="color:black;"><i class="fas fa-shopping-cart">&nbsp</i>View Cart&nbsp<span class="badge badge-secondary">${size}</span></a>
+                    <a href="/EcomProj/Cart/ViewCart.jsp" style="color:black;"><i class="fa fa-shopping-basket" aria-hidden="true"></i> View Cart&nbsp<span class="badge badge-secondary">${size}</span></a>
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:black;">
                         Welcome ${userObject.getUsername()}
                     </a>
@@ -78,10 +81,10 @@
             <c:otherwise>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/EcomProj/User/Login.jsp">Log In</a>
+                        <a class="nav-link" href="/EcomProj/User/Login.jsp"><i class="fas fa-sign-in-alt"></i> Log In</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://localhost:8080/EcomProj/User/Registration.jsp">Registration</a>
+                        <a class="nav-link" href="http://localhost:8080/EcomProj/User/Registration.jsp"><i class="fas fa-user-plus"></i> Sign UP</a>
                     </li>
                 </ul>
             </c:otherwise>

@@ -15,7 +15,9 @@
     <body>
         <c:import url="/header.jsp"></c:import>
         <div class="container">
-            <h4>Company Info</h4>            
+            <h4>Company Info</h4> 
+            <p> This Company is established in 2018. Our team is working continuously to enhance our customer experience.</p>
+            <p> Get the best price to product. Browse through various categories and get the best & Required product. </p>
         </div>
         
     </body>

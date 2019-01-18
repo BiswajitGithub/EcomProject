@@ -31,16 +31,19 @@
     </ol>
     <div class="carousel-inner">
     <div class="carousel-item active">
-    <img class="d-block w-100" style="height: 400px;" src="images/1.jpg" alt="First slide">
+        <img class="d-block w-100" style="height: 500px;" src="images/Image1.jpg" alt="First slide">
     </div>
     <div class="carousel-item">
-    <img class="d-block w-100" style="height: 400px;" src="images/2.jpg" alt="Second slide">
+        <img class="d-block w-100" style="height: 500px;" src="images/Image2.jpg" alt="Second slide">
     </div>
     <div class="carousel-item">
-    <img class="d-block w-100" style="height: 400px;" src="images/3.jpg" alt="Third slide">
+        <img class="d-block w-100" style="height: 500px;" src="images/Image3.jpg" alt="Third slide">
     </div>
         <div class="carousel-item">
-    <img class="d-block w-100" style="height: 400px;" src="images/4.jpg" alt="Third slide">
+            <img class="d-block w-100" style="height: 500px;" src="images/Image4.jpg" alt="Third slide">
+    </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" style="height: 500px;" src="images/slide2.jpg" alt="First slide">
     </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -67,11 +70,11 @@
         
     <div class="col-md-3">
         <ul class="list-group">
-            <li class="list-group-item" style="background-color: grey;"><h4>Categories<h4></li>
+            <li class="list-group-item" style="background-color: lightblue;"><h4>Categories<h4></li>
             
             <c:forEach items="${productMap}" var="entry">
                 
-                <li class="list-group-item">${entry.key}<a style="float: right;" href="#" class="badge badge-secondary"><span>${entry.value.size()}</span></a></li>
+                <li class="list-group-item">${entry.key}<a style="float: right;" href="#" class="badge badge-secondary"><span> ${entry.value.size()}</span></a></li>
             </c:forEach>
         </ul>
     </div>
@@ -101,7 +104,11 @@
         <!-- Footer   --->
 
         <div class="jumbotron" style="color:white;background-color: black; margin-top: 60px; margin-bottom: 0;">
-            <p>Welcome to Ecom</p>
+            <p>Welcome to Shop 24</p>
+            <p>Shop 24*7 with Us. Browse through various categories & Product</p>
+            <p>Get best service & Product. Our Team will provide any time service & help requirement</p>
+            <a class="nav-link" href="/EcomProj/AboutUs.jsp"><i class="fas fa-user"></i> About Us</a>
+            
         </div>
 
         </body>

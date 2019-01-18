@@ -4,6 +4,8 @@
     Author     : innoc
 --%>
 
+<%@page import="com.mycompany.ecomproj.impl.CategoryDAOImpl"%>
+<%@page import="com.mycompany.ecomproj.dao.CategoryDAO"%>
 <%@page import="com.mycompany.ecomproj.model.User"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page import="com.mycompany.ecomproj.impl.ProductDAOImpl"%>
@@ -29,6 +31,9 @@
         if( u == null && !u.getRol().equals("ROLE_ADMIN") )
         response.sendError ( HttpServletResponse.SC_UNAUTHORIZED, "You don't have enough privileges" );
     
+        CategoryDAO cdao = new CategoryDAOImpl();
+    
+    request.setAttribute("catList", cdao.getCategory());
    
 %>
 
@@ -50,7 +55,14 @@
             <input type="file" class="form-control" name="imagePath"><br> 
             <input type="text" class="form-control" name="imagePath" value="${productObject.getImagePath()}"><br> 
              <input type="text" name="qty" class="form-control" value="${productObject.getQty()}"><br>
-              <input type="text"  name="category" class="form-control" value="${productObject.getCategory()}"><br>
+              <select class="form-control" name="category">
+
+                    <c:forEach items="${catList}" var="c">
+                        <option value="${c.getName()}" title="${c.getDescription()}">${c.getName()}</option>
+                    </c:forEach>
+                    
+
+                </select><br>
             <button class="btn btn-danger" type="submit">Update Product</button>
         </form>
          </div>

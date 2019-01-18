@@ -39,7 +39,7 @@
             <form method="post" action="${pageContext.request.contextPath}/AddProductToCart">
                 
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-6">
                     <h2>${curr.getCategory()}</h2>
                 <input type="hidden" value="${curr.getId()}" name="prodId">
                
@@ -48,8 +48,8 @@
                 <button type="submit" class="btn btn-danger">Add To Cart</button>
                 
                     </div>
-                    <div class="col-md-4">
-                        <img src="${curr.getImagePath()}" style="height: 350px; width: 300px;" class="img img-thumbnail">
+                    <div class="col-md-6">
+                        <img src="${curr.getImagePath()}" style="height: 350px; width: 1300px;" class="img img-thumbnail">
                     </div>
                 </div>
                 
